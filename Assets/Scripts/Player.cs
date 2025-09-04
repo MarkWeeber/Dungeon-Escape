@@ -4,17 +4,19 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     #region inspector fields
+    [Header("Movement")]
     [SerializeField] private float _moveSpeed = 60f;
     [SerializeField] private float _jumpImpulseForce = 10f;
+    [Header("Is grounded feature")]
     [SerializeField] private BoxCollider2D _groundCheckerCollider;
+    [SerializeField] private LayerMask _groundedMask = Physics2D.AllLayers;
     #endregion
 
     #region vars
     private bool _jumping, _isGrounded;
     private Rigidbody2D _rBody;
-    private Vector2 _inputVector, _groundCheckerOffsetPostion, _groundCheckerSize;
+    private Vector2 _inputVector, _groundCheckerOffsetPostion, _groundCheckerSize, _boxCastPosition;
     private InputActions _inputActions;
-
     #endregion
 
     #region init & deinit
@@ -34,20 +36,21 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        _inputActions.Player.Movement.performed -= OnInputMovePerformed;
-        _inputActions.Player.Movement.canceled -= OnInputMoveCancelled;
+        RemoveCallbacks();
     }
 
     private void AssignCallbacks()
     {
         _inputActions.Player.Movement.performed += OnInputMovePerformed;
         _inputActions.Player.Movement.canceled += OnInputMoveCancelled;
+        _inputActions.Player.Jump.started += OnInputJumpStarted;
     }
 
     private void RemoveCallbacks()
     {
         _inputActions.Player.Movement.performed += OnInputMovePerformed;
         _inputActions.Player.Movement.canceled += OnInputMoveCancelled;
+        _inputActions.Player.Jump.started -= OnInputJumpStarted;
     }
     #endregion
 
@@ -59,12 +62,14 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _isGrounded = IsGrounded();
+        // horizontal movement
         var currentVelocity = _rBody.velocity;
         _rBody.velocity = new Vector2(
             _moveSpeed * _inputVector.x * Time.fixedDeltaTime,
             currentVelocity.y
         );
+        // jumping
+        _isGrounded = IsGrounded();
         if (_jumping && _isGrounded)
         {
             _rBody.AddForce(Vector2.up * _jumpImpulseForce, ForceMode2D.Impulse);
@@ -74,8 +79,8 @@ public class Player : MonoBehaviour
 
     private bool IsGrounded()
     {
-        Vector2 boxCastPosition = (Vector2)transform.position + _groundCheckerOffsetPostion;
-        if (Physics2D.BoxCast(boxCastPosition, _groundCheckerSize, 0f, Vector2.zero))
+        _boxCastPosition = (Vector2)transform.position + _groundCheckerOffsetPostion;
+        if (Physics2D.OverlapBox(_boxCastPosition, _groundCheckerSize, transform.eulerAngles.z, _groundedMask) != null)
         {
             return true;
         }
@@ -99,7 +104,5 @@ public class Player : MonoBehaviour
     {
         _inputVector = Vector2.zero;
     }
-
-
     #endregion
 }
