@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     #region inspector fields
+    [Header("General")]
+    [SerializeField] private Animator _animator;
+    [SerializeField] private SpriteRenderer _sprite;
     [Header("Movement")]
     [SerializeField] private float _moveSpeed = 60f;
     [SerializeField] private float _jumpImpulseForce = 10f;
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour
     #region  loop
     private void Update()
     {
-
+        ManageSpriteFlipping();
     }
 
     private void FixedUpdate()
@@ -74,6 +77,18 @@ public class Player : MonoBehaviour
         {
             _rBody.AddForce(Vector2.up * _jumpImpulseForce, ForceMode2D.Impulse);
             _jumping = false;
+        }
+    }
+
+    private void ManageSpriteFlipping()
+    {
+        if (_inputVector.x < -0.01f)
+        {
+            _sprite.flipX = true;
+        }
+        else if (_inputVector.x > 0.01f)
+        {
+            _sprite.flipX = false;
         }
     }
 
