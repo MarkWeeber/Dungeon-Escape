@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -6,6 +7,7 @@ public class Player : MonoBehaviour
     #region inspector fields
     [Header("General")]
     [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _swordArcAnimator;
     [SerializeField] private SpriteRenderer _sprite;
     [Header("Movement")]
     [SerializeField] private float _moveSpeed = 60f;
@@ -16,7 +18,7 @@ public class Player : MonoBehaviour
     #endregion
 
     #region vars
-    private bool _jumping, _isGrounded;
+    private bool _jumpedByRigidBody, _jumping, _isGrounded, _attacking, _moving;
     private Rigidbody2D _rBody;
     private Vector2 _inputVector, _groundCheckerOffsetPostion, _groundCheckerSize, _boxCastPosition;
     private InputActions _inputActions;
@@ -47,6 +49,7 @@ public class Player : MonoBehaviour
         _inputActions.Player.Movement.performed += OnInputMovePerformed;
         _inputActions.Player.Movement.canceled += OnInputMoveCancelled;
         _inputActions.Player.Jump.started += OnInputJumpStarted;
+        _inputActions.Player.Attack.started += OnAttackStarted;
     }
 
     private void RemoveCallbacks()
@@ -54,6 +57,7 @@ public class Player : MonoBehaviour
         _inputActions.Player.Movement.performed += OnInputMovePerformed;
         _inputActions.Player.Movement.canceled += OnInputMoveCancelled;
         _inputActions.Player.Jump.started -= OnInputJumpStarted;
+        _inputActions.Player.Attack.started -= OnAttackStarted;
     }
     #endregion
 
@@ -61,6 +65,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         ManageSpriteFlipping();
+        SetAnimators();
     }
 
     private void FixedUpdate()
@@ -77,6 +82,7 @@ public class Player : MonoBehaviour
         {
             _rBody.AddForce(Vector2.up * _jumpImpulseForce, ForceMode2D.Impulse);
             _jumping = false;
+            _jumpedByRigidBody = true;
         }
     }
 
@@ -103,7 +109,37 @@ public class Player : MonoBehaviour
     }
     #endregion
 
+    #region animators
+    private void SetAnimators()
+    {
+        if (Math.Abs(_inputVector.x) > 0.005f)
+        {
+            _animator.SetBool("Running", true);
+        }
+        else
+        {
+            _animator.SetBool("Running", false);
+        }
+        if (_jumpedByRigidBody)
+        {
+            _attacking = false;
+            _isGrounded = false;
+        }
+        _animator.SetBool("Attacking", _attacking);
+        _animator.SetBool("Grounded", _isGrounded);
+        _animator.SetBool("Jumping", _jumpedByRigidBody);
+        _animator.SetFloat("VerticalSpeed", _rBody.velocity.y);
+        _attacking = false;
+        _jumpedByRigidBody = false;
+    }
+    #endregion
+
     #region Delegates && callbacks
+
+    private void OnAttackStarted(InputAction.CallbackContext context)
+    {
+        _attacking = true;
+    }
 
     private void OnInputJumpStarted(InputAction.CallbackContext context)
     {
