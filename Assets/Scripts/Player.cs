@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     #region inspector fields
     [Header("General")]
     [SerializeField] private Animator _animator;
-    [SerializeField] private Animator _swordArcAnimator;
-    [SerializeField] private SpriteRenderer _sprite;
+    [SerializeField] private SpriteRenderer _mainCharacterSprite;
+    [SerializeField] private Transform _swordArcRootTransform;
     [Header("Movement")]
     [SerializeField] private float _moveSpeed = 60f;
     [SerializeField] private float _jumpImpulseForce = 10f;
@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private bool _jumpedByRigidBody, _jumping, _isGrounded, _attacking, _moving;
     private Rigidbody2D _rBody;
     private Vector2 _inputVector, _groundCheckerOffsetPostion, _groundCheckerSize, _boxCastPosition;
+    private Quaternion _inverseYRotation = Quaternion.Euler(0f, 180f, 0f);
     private InputActions _inputActions;
     #endregion
 
@@ -90,11 +91,13 @@ public class Player : MonoBehaviour
     {
         if (_inputVector.x < -0.01f)
         {
-            _sprite.flipX = true;
+            _mainCharacterSprite.flipX = true;
+            _swordArcRootTransform.rotation = _inverseYRotation;
         }
         else if (_inputVector.x > 0.01f)
         {
-            _sprite.flipX = false;
+            _mainCharacterSprite.flipX = false;
+            _swordArcRootTransform.rotation = Quaternion.identity;
         }
     }
 
