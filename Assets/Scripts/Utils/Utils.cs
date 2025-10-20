@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
-public static class Utlis
+public static class Utils
 {
+    // extending the List<T> functionality to cycle through and get next item
     public static T GetNextItem<T>(this List<T> list, T currentItem)
     {
         if (list != null || list.Any())
@@ -23,5 +25,17 @@ public static class Utlis
             }
         }
         return default(T);
+    }
+    // check if layer is in layermask
+    public static bool CheckLayer(LayerMask layerMask, int layer)
+    {
+        if ((layerMask.value & (1 << layer)) > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

@@ -12,18 +12,28 @@ public abstract class Enemy : MonoBehaviour
     [Header("Or define waypoints manually")]
     [SerializeField] protected List<Waypoint> waypoints;
     [SerializeField] protected float minDistance = 0.45f;
+    [Header("Enemy visionining")]
+    [SerializeField] EnemyVision enemyVision;
 
     protected Animator animator;
     protected SpriteRenderer sprite;
+    protected Transform target;
 
     private Waypoint _currentWaypoint = null;
-    private float _horizontalDistanceToWaypoint;
+    private float _horizontalDistanceToTarget;
     private float _waypointWaitTimer;
     private Vector3 _movement;
+    private bool _attackingTarget;
 
+    #region init
     private void Start()
     {
         Init();
+        if (enemyVision != null)
+        { 
+            enemyVision.OnVisionEnter += OnTargetVisionEnter;
+            enemyVision.OnVisionExit += OnTragetVisionExit;
+        }
     }
 
     protected virtual void Init()
@@ -34,17 +44,42 @@ public abstract class Enemy : MonoBehaviour
         {
             waypoints = waypointsRoot.GetComponentsInChildren<Waypoint>().ToList();
         }
+
     }
 
+    private void OnDestroy()
+    {
+        if (enemyVision != null)
+        {
+            enemyVision.OnVisionEnter -= OnTargetVisionEnter;
+            enemyVision.OnVisionExit -= OnTragetVisionExit;
+        }
+    }
+    #endregion
+
+    #region loop
     private void Update()
     {
-        ManageMovement();
         ManageSpriteFlipping();
         ManageAnimator();
+        AttackTarget();
+        ManageCyclingWaypoints();
+        Managemovement();
     }
 
-    protected virtual void ManageMovement()
+    protected virtual void AttackTarget()
     {
+        _attackingTarget = false;
+        if (target == null) return;
+        if(ReachTarget(target, minDistance)) // if target is reached, stay and perform attacks
+        {
+            _attackingTarget = true;
+        }
+    }
+
+    protected virtual void ManageCyclingWaypoints()
+    {
+        if (target != null) return;
         if (waypoints == null) return;
         if (_currentWaypoint == null)
         {
@@ -52,15 +87,7 @@ public abstract class Enemy : MonoBehaviour
             if (_currentWaypoint == null) return;
             _waypointWaitTimer = _currentWaypoint.WaitTime;
         }
-        _movement = Vector3.zero;
-        _horizontalDistanceToWaypoint = _currentWaypoint.transform.position.x - transform.position.x;
-        // not yet reached target - horizontal moving
-        if (Mathf.Abs(_horizontalDistanceToWaypoint) > minDistance)
-        {
-            _movement.x = (_horizontalDistanceToWaypoint > 0f) ? speed : -speed;
-        }
-        // target reached - waiting, idling
-        else
+        if(ReachTarget(_currentWaypoint.transform, minDistance)) // true if target reached, otherwise move to target
         {
             if (_waypointWaitTimer < 0f)
             {
@@ -69,6 +96,23 @@ public abstract class Enemy : MonoBehaviour
             }
             else _waypointWaitTimer -= Time.deltaTime;
         }
+    }
+
+    // returns true if target reached,else returns false and sets movement vector
+    private bool ReachTarget(Transform destination, float minimumDistance)
+    {
+        _movement = Vector3.zero;
+        _horizontalDistanceToTarget = destination.position.x - transform.position.x;
+        if (Mathf.Abs(_horizontalDistanceToTarget) > minimumDistance)
+        {
+            _movement.x = (_horizontalDistanceToTarget > 0f) ? speed : -speed;
+            return false;
+        }
+        else return true;
+    }
+
+    protected virtual void Managemovement()
+    {
         // apply movement
         transform.Translate(_movement * Time.deltaTime);
     }
@@ -83,18 +127,43 @@ public abstract class Enemy : MonoBehaviour
         {
             animator.SetBool("Moving", false);
         }
+        animator.SetBool("Attacking", _attackingTarget);
     }
 
     protected virtual void ManageSpriteFlipping()
     {
-        if (_movement.x > 0)
+        if (_horizontalDistanceToTarget > 0) // look right
         {
             sprite.flipX = false;
+            enemyVision.transform.localEulerAngles
+                    = new Vector3(
+                        enemyVision.transform.localRotation.eulerAngles.x,
+                        0f,
+                        enemyVision.transform.localRotation.eulerAngles.z
+                        );
         }
-        else if (_movement.x < 0)
+        else if (_horizontalDistanceToTarget < 0) // look left
         {
             sprite.flipX = true;
+            enemyVision.transform.localEulerAngles
+                    = new Vector3(
+                        enemyVision.transform.localRotation.eulerAngles.x,
+                        180f,
+                        enemyVision.transform.localRotation.eulerAngles.z
+                        );
         }
     }
 
+    #endregion
+
+    #region delegates
+    private void OnTargetVisionEnter(Transform target)
+    {
+        this.target = target;
+    }
+    private void OnTragetVisionExit()
+    {
+        target = null;
+    }
+    #endregion
 }
