@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -26,6 +27,7 @@ public static class Utils
         }
         return default(T);
     }
+    
     // check if layer is in layermask
     public static bool CheckLayer(LayerMask layerMask, int layer)
     {
@@ -38,4 +40,37 @@ public static class Utils
             return false;
         }
     }
+
+    // add new item to simple array, if item alread in - skip, if array already full - skip
+    public static bool TryAddNewItem<T>(this T[] array, T newItem)
+    {
+        if (array == null) return false;
+        bool result = false;
+        int length = array.Length;
+        int index = 0;
+        int emptyIndex = -1;
+        T currentItem = default(T);
+        while (index < length)
+        {
+            currentItem = array[index];
+            if (currentItem == null)
+            {
+                emptyIndex = index;
+            }
+            // item already exists - break with false result
+            else if (currentItem.Equals(newItem))
+            {
+                break;
+            }
+            index++;
+        }
+        if (emptyIndex > -1)
+        {
+            array[emptyIndex] = newItem;
+            result = true;
+        }
+        return result;
+    }
+
+
 }

@@ -16,14 +16,18 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] EnemyVision enemyVision;
 
     protected Animator animator;
-    protected SpriteRenderer sprite;
-    protected Transform target;
+    protected float waitingTimer = 0f;
+    protected bool alive = true;
 
+    #region private vars
+    private SpriteRenderer sprite;
+    private Transform target;
     private Waypoint _currentWaypoint = null;
     private float _horizontalDistanceToTarget;
     private float _waypointWaitTimer;
     private Vector3 _movement;
     private bool _attackingTarget;
+    #endregion
 
     #region init
     private void Start()
@@ -60,14 +64,22 @@ public abstract class Enemy : MonoBehaviour
     #region loop
     private void Update()
     {
+        // if dead then perform no actions
+        if (!alive) return;
+        // if enemy is dormant by some time then skip other actions
+        if (waitingTimer > 0)
+        {
+            waitingTimer -= Time.deltaTime;
+            return;
+        }
         ManageSpriteFlipping();
-        ManageAnimator();
-        AttackTarget();
-        ManageCyclingWaypoints();
+        ManageAttackingTarget();
+        ManagePatroling();
         Managemovement();
+        ManageAnimator();
     }
 
-    protected virtual void AttackTarget()
+    private void ManageAttackingTarget()
     {
         _attackingTarget = false;
         if (target == null) return;
@@ -77,7 +89,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    protected virtual void ManageCyclingWaypoints()
+    private void ManagePatroling()
     {
         if (target != null) return;
         if (waypoints == null) return;
@@ -111,13 +123,13 @@ public abstract class Enemy : MonoBehaviour
         else return true;
     }
 
-    protected virtual void Managemovement()
+    private void Managemovement()
     {
         // apply movement
         transform.Translate(_movement * Time.deltaTime);
     }
 
-    protected virtual void ManageAnimator()
+    private void ManageAnimator()
     {
         if (Mathf.Abs(_movement.x) > 0.01f)
         {
@@ -130,7 +142,7 @@ public abstract class Enemy : MonoBehaviour
         animator.SetBool("Attacking", _attackingTarget);
     }
 
-    protected virtual void ManageSpriteFlipping()
+    private void ManageSpriteFlipping()
     {
         if (_horizontalDistanceToTarget > 0) // look right
         {
