@@ -2,10 +2,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamagable
 {
     #region inspector fields
     [Header("General")]
+    [SerializeField] private int _health = 100;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _mainCharacterSprite;
     [SerializeField] private Transform _swordArcRootTransform;
@@ -18,11 +19,14 @@ public class Player : MonoBehaviour
     #endregion
 
     #region vars
-    private bool _jumpedByRigidBody, _jumping, _isGrounded, _attacking, _moving;
+    private bool _alive = true;
+    private bool _jumpedByRigidBody, _jumping, _isGrounded, _attacking;
     private Rigidbody2D _rBody;
     private Vector2 _inputVector, _groundCheckerOffsetPostion, _groundCheckerSize, _boxCastPosition;
     private Quaternion _inverseYRotation = Quaternion.Euler(0f, 180f, 0f);
     private InputActions _inputActions;
+
+    public int Health { get => _health; set => _health = value; }
     #endregion
 
     #region init & deinit
@@ -65,12 +69,14 @@ public class Player : MonoBehaviour
     #region  loop
     private void Update()
     {
+        if (!_alive) return;
         ManageSpriteFlipping();
         SetAnimators();
     }
 
     private void FixedUpdate()
     {
+        if (!_alive) return;
         // horizontal movement
         var currentVelocity = _rBody.velocity;
         _rBody.velocity = new Vector2(
@@ -157,6 +163,20 @@ public class Player : MonoBehaviour
     private void OnInputMoveCancelled(InputAction.CallbackContext context)
     {
         _inputVector = Vector2.zero;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (_health > 0)
+        {
+            
+            _health -= damage;
+            if (_health <= 0)
+            {
+                _alive = false;
+                _animator.SetTrigger("Death");
+            }
+        }
     }
     #endregion
 }

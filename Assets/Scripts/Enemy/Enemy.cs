@@ -70,6 +70,7 @@ public abstract class Enemy : MonoBehaviour
         if (waitingTimer > 0)
         {
             waitingTimer -= Time.deltaTime;
+            ManageSpriteFlipping();
             return;
         }
         ManageSpriteFlipping();
@@ -163,6 +164,15 @@ public abstract class Enemy : MonoBehaviour
                         180f,
                         enemyVision.transform.localRotation.eulerAngles.z
                         );
+        }
+    }
+
+    // if enemy was hit whilst not yet seen player - check behind
+    protected void CheckBehindIfNotYetAlerted()
+    {
+        if (target == null)
+        {
+            _horizontalDistanceToTarget *= -1;
         }
     }
 
