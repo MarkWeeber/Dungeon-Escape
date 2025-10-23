@@ -1,7 +1,10 @@
-﻿public class Spider : Enemy, IDamagable
-{
-    public int Health { get; set; }
+﻿using UnityEngine;
 
+public class Spider : Enemy, IDamagable
+{
+    [SerializeField] private bool stationary = false;
+    public int Health { get; set; }
+    
     public void TakeDamage(int damage)
     {
         if (health > 0)

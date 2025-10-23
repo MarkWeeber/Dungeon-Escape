@@ -11,9 +11,10 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected GameObject waypointsRoot;
     [Header("Or define waypoints manually")]
     [SerializeField] protected List<Waypoint> waypoints;
-    [SerializeField] protected float minDistance = 0.45f;
+    [SerializeField] protected float waypointMinDistance = 0.45f;
     [Header("Enemy visionining")]
     [SerializeField] EnemyVision enemyVision;
+    [SerializeField] protected float targetAttackMinDistance = 0.45f;
 
     protected Animator animator;
     protected float waitingTimer = 0f;
@@ -48,7 +49,6 @@ public abstract class Enemy : MonoBehaviour
         {
             waypoints = waypointsRoot.GetComponentsInChildren<Waypoint>().ToList();
         }
-
     }
 
     private void OnDestroy()
@@ -84,7 +84,7 @@ public abstract class Enemy : MonoBehaviour
     {
         _attackingTarget = false;
         if (target == null) return;
-        if(ReachTarget(target, minDistance)) // if target is reached, stay and perform attacks
+        if(ReachTarget(target, targetAttackMinDistance)) // if target is reached, stay and perform attacks
         {
             _attackingTarget = true;
         }
@@ -100,7 +100,7 @@ public abstract class Enemy : MonoBehaviour
             if (_currentWaypoint == null) return;
             _waypointWaitTimer = _currentWaypoint.WaitTime;
         }
-        if(ReachTarget(_currentWaypoint.transform, minDistance)) // true if target reached, otherwise move to target
+        if(ReachTarget(_currentWaypoint.transform, waypointMinDistance)) // true if target reached, otherwise move to target
         {
             if (_waypointWaitTimer < 0f)
             {

@@ -4,21 +4,21 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class DamageDealer : MonoBehaviour
 {
-    [SerializeField] private int damage = 12;
-    [SerializeField] private LayerMask targetMask = 0;
-    [SerializeField] private ushort maxEntitiesDamagedAtOnce = 2;
-    private Collider2D _collider;
-    private IDamagable[] damagables;
-    private IDamagable damagable;
+    [SerializeField] protected int damage = 12;
+    [SerializeField] protected LayerMask targetMask = 0;
+    [SerializeField] protected ushort maxEntitiesDamagedAtOnce = 2;
+    protected Collider2D _collider;
+    protected IDamagable[] damagables;
+    protected IDamagable damagable;
 
-    private void Start()
+    protected virtual void Start()
     {
         _collider = GetComponent<Collider2D>();
         _collider.isTrigger = true;
         damagables = new IDamagable[maxEntitiesDamagedAtOnce];
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (Utils.CheckLayer(targetMask, collision.gameObject.layer))
         {
@@ -32,7 +32,7 @@ public class DamageDealer : MonoBehaviour
         }
     }
 
-    public void FinishDamageDealing()
+    public virtual void FinishDamageDealing()
     {
         Array.Clear(damagables,0, damagables.Length);
     }
