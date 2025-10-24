@@ -62,7 +62,7 @@ public abstract class Enemy : MonoBehaviour
     #endregion
 
     #region loop
-    private void Update()
+    protected virtual void Update()
     {
         // if dead then perform no actions
         if (!alive) return;
