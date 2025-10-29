@@ -4,9 +4,11 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    [Header("General settings")]
     [SerializeField] protected int health = 100;
     [SerializeField] protected float speed = 2f;
     [SerializeField] protected int gems = 2;
+    [SerializeField] private GameObject _diamondPrefab;
     [Header("Define waypoints parent")]
     [SerializeField] protected GameObject waypointsRoot;
     [Header("Or define waypoints manually")]
@@ -166,7 +168,9 @@ public abstract class Enemy : MonoBehaviour
                         );
         }
     }
+    #endregion
 
+    #region calls functions
     // if enemy was hit whilst not yet seen player - check behind
     protected void CheckBehindIfNotYetAlerted()
     {
@@ -176,6 +180,14 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
+    protected void SpawnGemsOnDeath()
+    {
+        var instantiatedObject = Instantiate(_diamondPrefab, transform.position, Quaternion.identity);
+        if(instantiatedObject.TryGetComponent(out Diamond diamond))
+        {
+            diamond.DiamondWorth = gems;
+        }
+    }
     #endregion
 
     #region delegates

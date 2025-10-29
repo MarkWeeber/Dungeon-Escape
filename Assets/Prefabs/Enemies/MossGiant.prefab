@@ -277,10 +277,13 @@ MonoBehaviour:
   health: 100
   speed: 2
   gems: 2
+  _diamondPrefab: {fileID: 6831958030796970603, guid: ab6895f15d8872e418ca87f6e2bf00d2,
+    type: 3}
   waypointsRoot: {fileID: 0}
   waypoints: []
-  minDistance: 0.45
+  waypointMinDistance: 0.45
   enemyVision: {fileID: 7719481030465516021}
+  targetAttackMinDistance: 0.45
   _staggerDuration: 1
 --- !u!61 &7719481030194117885
 BoxCollider2D:

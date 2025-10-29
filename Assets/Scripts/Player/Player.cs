@@ -6,6 +6,8 @@ public class Player : MonoBehaviour, IDamagable
 {
     #region inspector fields
     [Header("General")]
+    [SerializeField] private int _diamonds;
+    public int Diamonds { get => _diamonds; set => _diamonds = value; }
     [SerializeField] private int _health = 100;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _mainCharacterSprite;
@@ -169,7 +171,7 @@ public class Player : MonoBehaviour, IDamagable
     {
         if (_health > 0)
         {
-            
+
             _health -= damage;
             if (_health <= 0)
             {

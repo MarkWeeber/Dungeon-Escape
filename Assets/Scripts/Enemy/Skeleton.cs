@@ -14,6 +14,7 @@ public class Skeleton : Enemy, IDamagable
             if (health <= 0)
             {
                 animator.SetTrigger("Death");
+                SpawnGemsOnDeath();
                 alive = false;
             }
             else

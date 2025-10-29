@@ -31,6 +31,7 @@ public class Spider : Enemy, IDamagable
             if (health <= 0)
             {
                 animator.SetTrigger("Death");
+                SpawnGemsOnDeath();
                 alive = false;
             }
             else

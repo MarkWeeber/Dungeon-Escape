@@ -168,11 +168,14 @@ MonoBehaviour:
   health: 100
   speed: 1
   gems: 2
+  _diamondPrefab: {fileID: 6831958030796970603, guid: ab6895f15d8872e418ca87f6e2bf00d2,
+    type: 3}
   waypointsRoot: {fileID: 0}
   waypoints: []
   waypointMinDistance: 0.45
   enemyVision: {fileID: 5493950231748392419}
   targetAttackMinDistance: 3
+  stationary: 0
 --- !u!50 &5493950231972530360
 Rigidbody2D:
   serializedVersion: 4
