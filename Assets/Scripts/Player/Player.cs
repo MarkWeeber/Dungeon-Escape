@@ -2,12 +2,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour, IDamagable
+public class Player : SingletonBehaviour<Player>, IDamagable
 {
     #region inspector fields
     [Header("General")]
     [SerializeField] private int _diamonds;
-    public int Diamonds { get => _diamonds; set => _diamonds = value; }
+    public int Diamonds { get => _diamonds; set {_diamonds = value; UpdateDiamondsCount();} }
     [SerializeField] private int _health = 100;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _mainCharacterSprite;
@@ -27,6 +27,7 @@ public class Player : MonoBehaviour, IDamagable
     private Vector2 _inputVector, _groundCheckerOffsetPostion, _groundCheckerSize, _boxCastPosition;
     private Quaternion _inverseYRotation = Quaternion.Euler(0f, 180f, 0f);
     private InputActions _inputActions;
+    private UIManager _uIManager;
 
     public int Health { get => _health; set => _health = value; }
     #endregion
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour, IDamagable
     #region init & deinit
     private void Start()
     {
+        _uIManager = UIManager.Instance;
         _rBody = GetComponent<Rigidbody2D>();
         _inputActions = GetComponent<InputManager>().InputActions;
         AssignCallbacks();
@@ -145,7 +147,12 @@ public class Player : MonoBehaviour, IDamagable
     }
     #endregion
 
-    #region Delegates && callbacks
+    #region Delegates, callbacks && functions
+
+    private void UpdateDiamondsCount()
+    {
+        _uIManager.UpdateDiamondsCount(_diamonds);
+    }
 
     private void OnAttackStarted(InputAction.CallbackContext context)
     {

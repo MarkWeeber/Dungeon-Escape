@@ -180,7 +180,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    protected void SpawnGemsOnDeath()
+    protected void SpawnDiamonOnDeath()
     {
         var instantiatedObject = Instantiate(_diamondPrefab, transform.position, Quaternion.identity);
         if(instantiatedObject.TryGetComponent(out Diamond diamond))

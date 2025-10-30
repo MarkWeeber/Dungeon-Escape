@@ -14,7 +14,7 @@ public class MossGiant : Enemy, IDamagable
             if (health <= 0)
             {
                 animator.SetTrigger("Death");
-                SpawnGemsOnDeath();
+                SpawnDiamonOnDeath();
                 alive = false;
             }
             else
