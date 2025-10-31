@@ -17,6 +17,7 @@ public abstract class Enemy : MonoBehaviour
     [Header("Enemy visionining")]
     [SerializeField] EnemyVision enemyVision;
     [SerializeField] protected float targetAttackMinDistance = 0.45f;
+    [SerializeField] protected float targetAttackDuration = 0.5f;
 
     protected Animator animator;
     protected float waitingTimer = 0f;
@@ -27,7 +28,8 @@ public abstract class Enemy : MonoBehaviour
     private Transform target;
     private Waypoint _currentWaypoint = null;
     private float _horizontalDistanceToTarget;
-    private float _waypointWaitTimer;
+    private float _waypointWaitingTimer;
+    private float _enemyAttackingTimer;
     private Vector3 _movement;
     private bool _attackingTarget;
     #endregion
@@ -84,32 +86,42 @@ public abstract class Enemy : MonoBehaviour
 
     private void ManageAttackingTarget()
     {
-        _attackingTarget = false;
-        if (target == null) return;
-        if(ReachTarget(target, targetAttackMinDistance)) // if target is reached, stay and perform attacks
+        if (_enemyAttackingTimer > 0 && _attackingTarget)
         {
-            _attackingTarget = true;
+            _enemyAttackingTimer -= Time.deltaTime;
+            if (_enemyAttackingTimer < 0)
+            {
+                _attackingTarget = false;
+            }
+        }
+        if (target != null && !_attackingTarget) // track down noticed target
+        {
+            if (ReachTarget(target, targetAttackMinDistance)) // if target is reached, stay and perform attacks
+            {
+                _attackingTarget = true;
+                _enemyAttackingTimer = targetAttackDuration;
+            }
         }
     }
 
     private void ManagePatroling()
     {
-        if (target != null) return;
+        if (target != null || _attackingTarget) return;
         if (waypoints == null) return;
         if (_currentWaypoint == null)
         {
             _currentWaypoint = waypoints.GetNextItem(_currentWaypoint);
             if (_currentWaypoint == null) return;
-            _waypointWaitTimer = _currentWaypoint.WaitTime;
+            _waypointWaitingTimer = _currentWaypoint.WaitTime;
         }
         if(ReachTarget(_currentWaypoint.transform, waypointMinDistance)) // true if target reached, otherwise move to target
         {
-            if (_waypointWaitTimer < 0f)
+            if (_waypointWaitingTimer < 0f) // if waypoint target reached add waiting time
             {
                 _currentWaypoint = waypoints.GetNextItem(_currentWaypoint);
-                _waypointWaitTimer = _currentWaypoint.WaitTime;
+                _waypointWaitingTimer = _currentWaypoint.WaitTime;
             }
-            else _waypointWaitTimer -= Time.deltaTime;
+            else _waypointWaitingTimer -= Time.deltaTime;
         }
     }
 
@@ -180,7 +192,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    protected void SpawnDiamonOnDeath()
+    protected void SpawnDiamondOnDeath()
     {
         var instantiatedObject = Instantiate(_diamondPrefab, transform.position, Quaternion.identity);
         if(instantiatedObject.TryGetComponent(out Diamond diamond))

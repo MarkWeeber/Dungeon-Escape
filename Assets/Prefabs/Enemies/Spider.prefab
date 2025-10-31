@@ -175,6 +175,7 @@ MonoBehaviour:
   waypointMinDistance: 0.45
   enemyVision: {fileID: 5493950231748392419}
   targetAttackMinDistance: 3
+  targetAttackDuration: 1
   stationary: 0
 --- !u!50 &5493950231972530360
 Rigidbody2D:

@@ -227,6 +227,7 @@ MonoBehaviour:
   waypointMinDistance: 0.45
   enemyVision: {fileID: 1955508617182350425}
   targetAttackMinDistance: 0.45
+  targetAttackDuration: 1
   _staggerDuration: 1
 --- !u!61 &1955508618310879194
 BoxCollider2D:
