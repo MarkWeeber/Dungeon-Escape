@@ -9,6 +9,7 @@ public class Player : SingletonBehaviour<Player>, IDamagable
     [SerializeField] private int _diamonds;
     public int Diamonds { get => _diamonds; set {_diamonds = value; UpdateDiamondsCount();} }
     [SerializeField] private int _health = 100;
+    [SerializeField] private int _maxHealth = 100;
     [SerializeField] private Animator _animator;
     [SerializeField] private SpriteRenderer _mainCharacterSprite;
     [SerializeField] private Transform _swordArcRootTransform;
@@ -180,6 +181,7 @@ public class Player : SingletonBehaviour<Player>, IDamagable
         {
 
             _health -= damage;
+            _uIManager.UpdateLifeBar((float)(_health / (float)_maxHealth));
             if (_health <= 0)
             {
                 _alive = false;
