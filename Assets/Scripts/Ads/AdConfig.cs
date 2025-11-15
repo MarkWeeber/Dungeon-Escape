@@ -14,7 +14,7 @@ public static class AdConfig
     private static string interstitialAdIdIOS = "none";
     private static string interstitialAdIdIOSTest = "ca-app-pub-3940256099942544/4411468910";
     private static string rewardedVideoAdIdAndroid = "ca-app-pub-9927260088180763/9319013474";
-    private static string rewardedVideoAdIdAndroidTest = "ca-app-pub-3940256099942544/5354046379";
+    private static string rewardedVideoAdIdAndroidTest = "ca-app-pub-3940256099942544/5224354917";//"ca-app-pub-3940256099942544/5354046379";
     private static string rewardedVideoAdIdIOS = "none";
     private static string rewardedVideoAdIdIOSTest = "ca-app-pub-3940256099942544/6978759866";
     private static PlatformType runtimePlatform = PlatformType.NONE;
