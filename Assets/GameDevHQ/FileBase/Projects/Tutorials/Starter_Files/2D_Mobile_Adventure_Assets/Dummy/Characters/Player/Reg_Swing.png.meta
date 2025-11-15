@@ -108,7 +108,7 @@ TextureImporter:
       213: 6262868493955004235
     second: Reg_Swing_34
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -128,6 +128,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -159,10 +161,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -960,6 +966,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Reg_Swing_0: -5964162089827432211
+      Reg_Swing_1: 617493124777166957
+      Reg_Swing_10: -3080460766072700828
+      Reg_Swing_11: -6556167105289778780
+      Reg_Swing_12: -7136371180954267730
+      Reg_Swing_13: -6558839100309286032
+      Reg_Swing_14: 7085235536732725617
+      Reg_Swing_15: -7519887596558472734
+      Reg_Swing_16: 5841159164919705351
+      Reg_Swing_17: -4415588860406355492
+      Reg_Swing_18: -7596790519047327704
+      Reg_Swing_19: -1440398507959325813
+      Reg_Swing_2: 5292426174088914102
+      Reg_Swing_20: 8466090584627996104
+      Reg_Swing_21: -2540509864895108918
+      Reg_Swing_22: -6866436555843136827
+      Reg_Swing_23: -7941507512696562053
+      Reg_Swing_24: -8240397068238924588
+      Reg_Swing_25: 6289096160880068174
+      Reg_Swing_26: -7987921098347923036
+      Reg_Swing_27: 453295964380628016
+      Reg_Swing_28: 3851691709145734784
+      Reg_Swing_29: 6557454178040328901
+      Reg_Swing_3: -4675802318642683909
+      Reg_Swing_30: -8966486237199961519
+      Reg_Swing_31: -951450379468653846
+      Reg_Swing_32: -6985344821082694255
+      Reg_Swing_33: 7906734755534856669
+      Reg_Swing_34: 6262868493955004235
+      Reg_Swing_4: -4623622344231152934
+      Reg_Swing_5: 3117383770265751802
+      Reg_Swing_6: 285118212360052588
+      Reg_Swing_7: -2837870861009544013
+      Reg_Swing_8: 6760987995304711023
+      Reg_Swing_9: 1911583729628109147
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

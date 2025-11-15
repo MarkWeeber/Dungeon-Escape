@@ -108,7 +108,7 @@ TextureImporter:
       213: -6240098238692064042
     second: Jump_Swing_34
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -128,6 +128,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -159,10 +161,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -960,6 +966,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Jump_Swing_0: -5151847389189986284
+      Jump_Swing_1: 7911632001533402158
+      Jump_Swing_10: 2153690606435020320
+      Jump_Swing_11: 7347147383003832744
+      Jump_Swing_12: 3728747923965313784
+      Jump_Swing_13: -8289742946531614666
+      Jump_Swing_14: -4111526741484246541
+      Jump_Swing_15: -8023935382188655693
+      Jump_Swing_16: 7658214098812281927
+      Jump_Swing_17: -464882386738911969
+      Jump_Swing_18: -9209181000864004280
+      Jump_Swing_19: 3806041676794755688
+      Jump_Swing_2: -9074126143459982049
+      Jump_Swing_20: 1037059350988642513
+      Jump_Swing_21: -2655913366669732969
+      Jump_Swing_22: -2481307095129340292
+      Jump_Swing_23: 7496711797143391974
+      Jump_Swing_24: 5343464476577969604
+      Jump_Swing_25: -4236304975521318634
+      Jump_Swing_26: 9158402467604048458
+      Jump_Swing_27: -1150319475205791465
+      Jump_Swing_28: -3045112729257379444
+      Jump_Swing_29: 7545144976918203959
+      Jump_Swing_3: -6981675387138614266
+      Jump_Swing_30: 8659033332107515960
+      Jump_Swing_31: 8570772145604079247
+      Jump_Swing_32: -5352291071458834582
+      Jump_Swing_33: -8558015999407392283
+      Jump_Swing_34: -6240098238692064042
+      Jump_Swing_4: 8829516654754483318
+      Jump_Swing_5: 5314121634627116795
+      Jump_Swing_6: -5775735528339891896
+      Jump_Swing_7: 5341116947588056767
+      Jump_Swing_8: -7005458433511099628
+      Jump_Swing_9: -5820211328618897257
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

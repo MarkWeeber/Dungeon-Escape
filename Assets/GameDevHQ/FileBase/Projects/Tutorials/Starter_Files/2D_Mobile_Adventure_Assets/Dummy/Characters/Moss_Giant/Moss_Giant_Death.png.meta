@@ -51,7 +51,7 @@ TextureImporter:
       213: -2345265936134657272
     second: Moss_Giant_Death_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -71,6 +71,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -102,10 +104,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -504,6 +510,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Moss_Giant_Death_0: -6799037162908250334
+      Moss_Giant_Death_1: 8994613460524660109
+      Moss_Giant_Death_10: 4141910736014510118
+      Moss_Giant_Death_11: 639870471179302638
+      Moss_Giant_Death_12: -5666775881842761771
+      Moss_Giant_Death_13: -940326158150740239
+      Moss_Giant_Death_14: 4444486879208123592
+      Moss_Giant_Death_15: -2345265936134657272
+      Moss_Giant_Death_2: 2764075577351296866
+      Moss_Giant_Death_3: -1868238131487459795
+      Moss_Giant_Death_4: 4305503654151451631
+      Moss_Giant_Death_5: -1268726175404827307
+      Moss_Giant_Death_6: -7003423062508917268
+      Moss_Giant_Death_7: 6737963221835007001
+      Moss_Giant_Death_8: -2315108327276389883
+      Moss_Giant_Death_9: -6012711312478604429
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

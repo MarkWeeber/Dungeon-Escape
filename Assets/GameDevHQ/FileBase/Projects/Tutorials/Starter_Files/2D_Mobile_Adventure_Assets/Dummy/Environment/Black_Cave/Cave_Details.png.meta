@@ -33,7 +33,7 @@ TextureImporter:
       213: -7764510104955091002
     second: Cave_Details_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +53,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -84,10 +86,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -360,6 +366,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Cave_Details_0: 5002808063957676921
+      Cave_Details_1: -6774543303268366271
+      Cave_Details_11: 1219904994508306829
+      Cave_Details_12: -408550783786114558
+      Cave_Details_13: -3639925427324453144
+      Cave_Details_14: -2760468987579048413
+      Cave_Details_15: -7764510104955091002
+      Cave_Details_3: 3144814192978161834
+      Cave_Details_4: -7483572713813664616
+      Cave_Details_5: -142988840751489599
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

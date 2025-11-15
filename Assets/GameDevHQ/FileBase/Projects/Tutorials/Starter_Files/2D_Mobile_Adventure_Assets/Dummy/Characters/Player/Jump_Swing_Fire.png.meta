@@ -108,7 +108,7 @@ TextureImporter:
       213: 6047300571331236368
     second: Jump_Swing_Fire_34
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -128,6 +128,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -159,10 +161,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -960,6 +966,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Jump_Swing_Fire_0: 2327405336075511656
+      Jump_Swing_Fire_1: 3476126927713392319
+      Jump_Swing_Fire_10: -449053241197992326
+      Jump_Swing_Fire_11: -7121993906968965036
+      Jump_Swing_Fire_12: -1055801630231849639
+      Jump_Swing_Fire_13: 3680967997176789858
+      Jump_Swing_Fire_14: 5534583580890176414
+      Jump_Swing_Fire_15: -3967538326841435177
+      Jump_Swing_Fire_16: -8283905424714267235
+      Jump_Swing_Fire_17: -4613137188212246278
+      Jump_Swing_Fire_18: -3537470038512744726
+      Jump_Swing_Fire_19: 7970683597344625728
+      Jump_Swing_Fire_2: -6998900559829647362
+      Jump_Swing_Fire_20: 2297750254992928410
+      Jump_Swing_Fire_21: 8112009294690376968
+      Jump_Swing_Fire_22: -1599894643971924075
+      Jump_Swing_Fire_23: -8203323231069003830
+      Jump_Swing_Fire_24: -1171778311286326346
+      Jump_Swing_Fire_25: 1028741536955918542
+      Jump_Swing_Fire_26: -4107652248118984832
+      Jump_Swing_Fire_27: 5543849347223590419
+      Jump_Swing_Fire_28: 5410813968783976981
+      Jump_Swing_Fire_29: 6030458511003217192
+      Jump_Swing_Fire_3: -8806658244288164819
+      Jump_Swing_Fire_30: 1899235516810293104
+      Jump_Swing_Fire_31: -5984894052846159970
+      Jump_Swing_Fire_32: -492434621685379933
+      Jump_Swing_Fire_33: -7609235352245590932
+      Jump_Swing_Fire_34: 6047300571331236368
+      Jump_Swing_Fire_4: 1616558906734888003
+      Jump_Swing_Fire_5: 435401801569618456
+      Jump_Swing_Fire_6: 4741317021247808150
+      Jump_Swing_Fire_7: -5226626082795415347
+      Jump_Swing_Fire_8: 3539323557140207997
+      Jump_Swing_Fire_9: -3043260023028698275
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -96,7 +96,7 @@ TextureImporter:
       213: -3743247265334526619
     second: Spider_Walk_30
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -116,6 +116,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -147,10 +149,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -864,6 +870,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Spider_Walk_0: -8624246290351694174
+      Spider_Walk_1: 3801943328980019525
+      Spider_Walk_10: -3272538903760083460
+      Spider_Walk_11: 8342023483735514255
+      Spider_Walk_12: 9017270360667619681
+      Spider_Walk_13: 5387845325834616780
+      Spider_Walk_14: 4402644372625874123
+      Spider_Walk_15: 1764667472174359962
+      Spider_Walk_16: 8386544092831586664
+      Spider_Walk_17: -9202888399115956228
+      Spider_Walk_18: -4643308484421488712
+      Spider_Walk_19: -4258566434148508612
+      Spider_Walk_2: -1193980094962732136
+      Spider_Walk_20: 2796537826519092075
+      Spider_Walk_21: -3344892907595716083
+      Spider_Walk_22: -4308659243948378621
+      Spider_Walk_23: 7643243359293423529
+      Spider_Walk_24: -889973191159869210
+      Spider_Walk_25: -1743656497551759587
+      Spider_Walk_26: 8942616062355107351
+      Spider_Walk_27: -6429755488074391639
+      Spider_Walk_28: 4479606238943137641
+      Spider_Walk_29: 389400428951127126
+      Spider_Walk_3: -7606293264188495512
+      Spider_Walk_30: -3743247265334526619
+      Spider_Walk_4: -6172629916289585737
+      Spider_Walk_5: 8453472961428482545
+      Spider_Walk_6: 7929009068656912319
+      Spider_Walk_7: 6300220171983489682
+      Spider_Walk_8: 7384511548894561916
+      Spider_Walk_9: 6678041229872936837
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

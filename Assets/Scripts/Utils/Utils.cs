@@ -72,5 +72,20 @@ public static class Utils
         return result;
     }
 
+    public static void ClearInvocations(this Action action)
+    {
+        foreach(Action _action in action.GetInvocationList())
+        {
+            action -= _action;
+        }
+    }
+
+    public static void ClearInvocations<T>(this Action<T> action)
+    {
+        foreach (Action<T> _action in action.GetInvocationList())
+        {
+            action -= _action;
+        }
+    }
 
 }

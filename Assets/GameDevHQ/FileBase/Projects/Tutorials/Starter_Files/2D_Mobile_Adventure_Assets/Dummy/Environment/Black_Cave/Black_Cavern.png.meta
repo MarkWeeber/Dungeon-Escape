@@ -51,7 +51,7 @@ TextureImporter:
       213: -2016651303475373587
     second: Black_Cavern_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -71,6 +71,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -102,10 +104,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -504,6 +510,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Black_Cavern_0: 5639815093444791707
+      Black_Cavern_1: -1251696322036871672
+      Black_Cavern_10: 7158320064863125804
+      Black_Cavern_11: 3660039949751393928
+      Black_Cavern_12: 6028027836568087695
+      Black_Cavern_13: 4770422098472813522
+      Black_Cavern_14: 7579975677517589627
+      Black_Cavern_15: -2016651303475373587
+      Black_Cavern_2: -5821505812732481769
+      Black_Cavern_3: 628137762280129430
+      Black_Cavern_4: 4642172309896682160
+      Black_Cavern_5: 3327635954839056307
+      Black_Cavern_6: -916928075566159287
+      Black_Cavern_7: -527458197124528813
+      Black_Cavern_8: -1019614559252343863
+      Black_Cavern_9: 3571309065774714951
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

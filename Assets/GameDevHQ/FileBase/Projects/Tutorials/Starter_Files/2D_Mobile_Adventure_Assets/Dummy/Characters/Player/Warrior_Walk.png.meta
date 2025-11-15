@@ -54,7 +54,7 @@ TextureImporter:
       213: -2282447013855230227
     second: Warrior_Walk_16
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,6 +74,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -105,10 +107,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -528,6 +534,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Warrior_Walk_0: 2233310422843343100
+      Warrior_Walk_1: -2227682028680092015
+      Warrior_Walk_10: -878060717100271795
+      Warrior_Walk_11: 2732365255953093281
+      Warrior_Walk_12: 3098050823026598556
+      Warrior_Walk_13: -7660294757088593622
+      Warrior_Walk_14: 6620390730679112048
+      Warrior_Walk_15: -3360233768374173544
+      Warrior_Walk_16: -2282447013855230227
+      Warrior_Walk_2: 1077808971507112341
+      Warrior_Walk_3: -4581133363081285678
+      Warrior_Walk_4: 58756933302036473
+      Warrior_Walk_5: -9171959971397630745
+      Warrior_Walk_6: 8677920546575052690
+      Warrior_Walk_7: 2439503895748546394
+      Warrior_Walk_8: -4571285959063575698
+      Warrior_Walk_9: 5153865266808137431
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

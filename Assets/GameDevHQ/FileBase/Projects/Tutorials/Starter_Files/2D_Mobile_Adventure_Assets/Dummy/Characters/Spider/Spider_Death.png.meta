@@ -96,7 +96,7 @@ TextureImporter:
       213: -6373307215172268941
     second: Spider_Death_30
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -116,6 +116,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -147,10 +149,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -864,6 +870,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Spider_Death_0: 5515940388465253583
+      Spider_Death_1: -6520443128951653849
+      Spider_Death_10: -4931404147288087084
+      Spider_Death_11: 6881875229547684426
+      Spider_Death_12: 4303769466727667012
+      Spider_Death_13: 4586777681906219758
+      Spider_Death_14: 5265022023639740371
+      Spider_Death_15: -620582921062787571
+      Spider_Death_16: 4488791372681652255
+      Spider_Death_17: 4039163050319630384
+      Spider_Death_18: -8652791768032594203
+      Spider_Death_19: -5240080820927950682
+      Spider_Death_2: -1438455721846447060
+      Spider_Death_20: -2179491946542612731
+      Spider_Death_21: -236438270778105026
+      Spider_Death_22: 6152064827210850160
+      Spider_Death_23: 4237073251075388097
+      Spider_Death_24: 2636805266812054137
+      Spider_Death_25: -268066435241211554
+      Spider_Death_26: 2685037774779261071
+      Spider_Death_27: 4032620940056966189
+      Spider_Death_28: -6484147580194844080
+      Spider_Death_29: 6541147359082852304
+      Spider_Death_3: -695508911225482883
+      Spider_Death_30: -6373307215172268941
+      Spider_Death_4: -4056761900464952230
+      Spider_Death_5: 7385018138126898444
+      Spider_Death_6: 6864951633810407737
+      Spider_Death_7: -7690719552909781631
+      Spider_Death_8: 1283128748658628804
+      Spider_Death_9: -8255346605438262791
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

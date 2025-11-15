@@ -96,7 +96,7 @@ TextureImporter:
       213: 3032391476906995699
     second: Spider_Attack_30
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -116,6 +116,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -147,10 +149,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -864,6 +870,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Spider_Attack_0: 857896185839556718
+      Spider_Attack_1: 2398538015460877697
+      Spider_Attack_10: 7254115398583282079
+      Spider_Attack_11: -5089329002140226645
+      Spider_Attack_12: 305258753410751267
+      Spider_Attack_13: -6489037155556928678
+      Spider_Attack_14: -3263673649181936384
+      Spider_Attack_15: 633992512703889615
+      Spider_Attack_16: -4423641455320837212
+      Spider_Attack_17: 8511238924470695966
+      Spider_Attack_18: 488054727143333835
+      Spider_Attack_19: 2016193143526757942
+      Spider_Attack_2: 7684751393892299153
+      Spider_Attack_20: -6318742531295012761
+      Spider_Attack_21: 7491975696038667972
+      Spider_Attack_22: 6523649514278165589
+      Spider_Attack_23: 2487796960675557916
+      Spider_Attack_24: -95004306938928369
+      Spider_Attack_25: 4434129198671563915
+      Spider_Attack_26: -7632096836809849147
+      Spider_Attack_27: 376817878070822159
+      Spider_Attack_28: 1127074815319215079
+      Spider_Attack_29: -7215695272772625566
+      Spider_Attack_3: 603225945861213092
+      Spider_Attack_30: 3032391476906995699
+      Spider_Attack_4: -1588523883212844327
+      Spider_Attack_5: 5577301503908604631
+      Spider_Attack_6: -7335753375035327994
+      Spider_Attack_7: 5422845618240816960
+      Spider_Attack_8: 2583963240797540595
+      Spider_Attack_9: -3035824133463445831
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

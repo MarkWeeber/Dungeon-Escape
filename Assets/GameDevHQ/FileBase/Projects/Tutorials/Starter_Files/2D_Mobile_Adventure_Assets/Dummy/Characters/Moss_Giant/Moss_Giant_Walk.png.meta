@@ -51,7 +51,7 @@ TextureImporter:
       213: 8902646133955017845
     second: Moss_Giant_Walk_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -71,6 +71,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -102,10 +104,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -504,6 +510,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Moss_Giant_Walk_0: 5088464693737205441
+      Moss_Giant_Walk_1: -1882037390930006050
+      Moss_Giant_Walk_10: 4158472392201538999
+      Moss_Giant_Walk_11: 8614022666037945189
+      Moss_Giant_Walk_12: -5889653191189624730
+      Moss_Giant_Walk_13: 7686206316054073060
+      Moss_Giant_Walk_14: 8401987768211086012
+      Moss_Giant_Walk_15: 8902646133955017845
+      Moss_Giant_Walk_2: 1843860107743658591
+      Moss_Giant_Walk_3: -1527745331690025409
+      Moss_Giant_Walk_4: -7555401313630164969
+      Moss_Giant_Walk_5: 6725653726563218686
+      Moss_Giant_Walk_6: 438777163670634951
+      Moss_Giant_Walk_7: 8150181339680435858
+      Moss_Giant_Walk_8: 6400864250547668899
+      Moss_Giant_Walk_9: 6175399649936200477
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

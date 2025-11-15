@@ -27,7 +27,7 @@ TextureImporter:
       213: -2047900779884253627
     second: Sword_Three_Particle_7
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -47,6 +47,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -78,10 +80,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -312,6 +318,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Sword_Three_Particle_0: 2357744514580099370
+      Sword_Three_Particle_1: 5587336425720312349
+      Sword_Three_Particle_2: 1391165063766556262
+      Sword_Three_Particle_3: -519043370033286665
+      Sword_Three_Particle_4: -1520160643837199502
+      Sword_Three_Particle_5: 8417350030932280937
+      Sword_Three_Particle_6: 7769067909470599537
+      Sword_Three_Particle_7: -2047900779884253627
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

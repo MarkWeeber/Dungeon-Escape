@@ -51,7 +51,7 @@ TextureImporter:
       213: -5503848669812476123
     second: Far_Cavern_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -71,6 +71,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -102,10 +104,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -504,6 +510,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Far_Cavern_0: 7798693932262605472
+      Far_Cavern_1: -6427635379560847210
+      Far_Cavern_10: 8211764509254443914
+      Far_Cavern_11: -4142154020424364173
+      Far_Cavern_12: 8343803173295835288
+      Far_Cavern_13: -2177437833825867693
+      Far_Cavern_14: -3374816772333790378
+      Far_Cavern_15: -5503848669812476123
+      Far_Cavern_2: 1879502814526755472
+      Far_Cavern_3: 219833882013313471
+      Far_Cavern_4: 5829959408232144656
+      Far_Cavern_5: 7322109111561562712
+      Far_Cavern_6: -839588452248286258
+      Far_Cavern_7: 6735870724283547837
+      Far_Cavern_8: 6203052892448827985
+      Far_Cavern_9: 8374054939895240049
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

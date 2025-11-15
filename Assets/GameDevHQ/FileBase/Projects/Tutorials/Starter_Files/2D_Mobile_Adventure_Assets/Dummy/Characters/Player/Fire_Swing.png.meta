@@ -108,7 +108,7 @@ TextureImporter:
       213: -7052987980185700601
     second: Fire_Swing_34
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -128,6 +128,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -159,10 +161,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -960,6 +966,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Fire_Swing_0: -1599734994217974308
+      Fire_Swing_1: -6977840158427920277
+      Fire_Swing_10: -7666694274549128316
+      Fire_Swing_11: -122003916083467754
+      Fire_Swing_12: -2267977204111315865
+      Fire_Swing_13: 7462391026845380718
+      Fire_Swing_14: -2386482548927916787
+      Fire_Swing_15: -4476627743125376660
+      Fire_Swing_16: 1795025693187496825
+      Fire_Swing_17: -7322852187679988694
+      Fire_Swing_18: -546107667861946405
+      Fire_Swing_19: -738776739139165120
+      Fire_Swing_2: -894020841504872203
+      Fire_Swing_20: 3030727399014353949
+      Fire_Swing_21: 5010634637739653134
+      Fire_Swing_22: 7158969125704694704
+      Fire_Swing_23: -945936959958697005
+      Fire_Swing_24: -2556352307298431792
+      Fire_Swing_25: 1171337714511741954
+      Fire_Swing_26: -7496889566927652546
+      Fire_Swing_27: 7766748715140788565
+      Fire_Swing_28: 4188377283097768160
+      Fire_Swing_29: -4974274558871014475
+      Fire_Swing_3: -2226852787455419608
+      Fire_Swing_30: 5220782065595586215
+      Fire_Swing_31: 8738312058926519455
+      Fire_Swing_32: -9177235809119318803
+      Fire_Swing_33: -4656359794623458751
+      Fire_Swing_34: -7052987980185700601
+      Fire_Swing_4: 8427189101169482816
+      Fire_Swing_5: 2948416516417748672
+      Fire_Swing_6: -7760375068050194724
+      Fire_Swing_7: -9091392195739614051
+      Fire_Swing_8: 7813470353335599320
+      Fire_Swing_9: -6032979568590613288
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

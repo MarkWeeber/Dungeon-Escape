@@ -192,7 +192,7 @@ TextureImporter:
       213: 2094304517430137552
     second: Bricks_Grey_62
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -212,6 +212,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -243,10 +245,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1632,6 +1638,70 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Bricks_Grey_0: -7614124256017593138
+      Bricks_Grey_1: -5646038583173455626
+      Bricks_Grey_10: -1565340926627230995
+      Bricks_Grey_11: -3740016709063516380
+      Bricks_Grey_12: -4597543502642943223
+      Bricks_Grey_13: 553253531636965915
+      Bricks_Grey_14: -3283394525160177230
+      Bricks_Grey_15: -4568408783606208127
+      Bricks_Grey_16: 7452665636013429722
+      Bricks_Grey_17: 7708770523031245608
+      Bricks_Grey_18: 8354441690534117020
+      Bricks_Grey_19: 1461985127155500726
+      Bricks_Grey_2: -751611564986881378
+      Bricks_Grey_20: -7030478883516916821
+      Bricks_Grey_21: -7788454607117373405
+      Bricks_Grey_22: -3954812705697163731
+      Bricks_Grey_23: -3331271073616282593
+      Bricks_Grey_24: 424191327807491917
+      Bricks_Grey_25: -4507860385908358479
+      Bricks_Grey_26: 7038059828941324545
+      Bricks_Grey_27: 1807993902660455891
+      Bricks_Grey_28: -5624143876247635557
+      Bricks_Grey_29: 7108689012527357598
+      Bricks_Grey_3: 4855773155909969757
+      Bricks_Grey_30: -1711563131668128667
+      Bricks_Grey_31: -319159824895410228
+      Bricks_Grey_32: -2975827289461004914
+      Bricks_Grey_33: -693605208297258721
+      Bricks_Grey_34: -3447634409627114480
+      Bricks_Grey_35: 4300854871440361342
+      Bricks_Grey_36: -2802911696759839701
+      Bricks_Grey_37: -7084120942057125719
+      Bricks_Grey_38: -3818201347312981346
+      Bricks_Grey_39: -7601280660747460391
+      Bricks_Grey_4: -7000466243824702287
+      Bricks_Grey_40: 1538208373869509657
+      Bricks_Grey_41: -7136207467244783956
+      Bricks_Grey_42: -4810811258261422451
+      Bricks_Grey_43: 281743098123951280
+      Bricks_Grey_44: -1012180216641464272
+      Bricks_Grey_45: -3391774859216492665
+      Bricks_Grey_46: -8291981920782981215
+      Bricks_Grey_47: 1872547274339421690
+      Bricks_Grey_48: 7335633983772194995
+      Bricks_Grey_49: 1865555143103123160
+      Bricks_Grey_5: 2389223429280960259
+      Bricks_Grey_50: -6520577599082959004
+      Bricks_Grey_51: -8236670754717174780
+      Bricks_Grey_52: 8770501723868291388
+      Bricks_Grey_53: -5785021528401945817
+      Bricks_Grey_54: -6861500889629542177
+      Bricks_Grey_55: -2276237397646822644
+      Bricks_Grey_56: -6441663902528333499
+      Bricks_Grey_57: -2357413481036761687
+      Bricks_Grey_58: 1215101478161530305
+      Bricks_Grey_59: -4409644936822196913
+      Bricks_Grey_6: -253137409373625183
+      Bricks_Grey_60: -9025032143700575325
+      Bricks_Grey_61: -5757006325204117937
+      Bricks_Grey_62: 2094304517430137552
+      Bricks_Grey_7: -1683380353670596694
+      Bricks_Grey_8: 1108419920429450242
+      Bricks_Grey_9: -5494030080182014727
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

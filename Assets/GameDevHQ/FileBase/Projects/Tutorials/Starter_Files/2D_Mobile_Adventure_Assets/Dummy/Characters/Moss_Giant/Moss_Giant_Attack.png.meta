@@ -69,7 +69,7 @@ TextureImporter:
       213: 6439409923173584106
     second: Moss_Giant_Attack_21
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -89,6 +89,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -120,10 +122,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -522,6 +528,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Moss_Giant_Attack_0: -1903672223919429875
+      Moss_Giant_Attack_1: 885066989130785602
+      Moss_Giant_Attack_10: 284917083934468436
+      Moss_Giant_Attack_11: 1044200810968105304
+      Moss_Giant_Attack_12: 695892839477706834
+      Moss_Giant_Attack_13: 3821729607967089682
+      Moss_Giant_Attack_14: -2248829063167967721
+      Moss_Giant_Attack_15: -925850944518745546
+      Moss_Giant_Attack_2: -8895601373955547053
+      Moss_Giant_Attack_3: 590462230088817120
+      Moss_Giant_Attack_4: 9185977859553562034
+      Moss_Giant_Attack_5: -6820248513215824023
+      Moss_Giant_Attack_6: 7799061112675470860
+      Moss_Giant_Attack_7: 4435653638412302466
+      Moss_Giant_Attack_8: 1841739893291566235
+      Moss_Giant_Attack_9: 7669927044728561126
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

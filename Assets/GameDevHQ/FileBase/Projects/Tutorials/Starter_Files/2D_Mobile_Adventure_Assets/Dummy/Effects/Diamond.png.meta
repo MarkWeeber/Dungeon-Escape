@@ -93,7 +93,7 @@ TextureImporter:
       213: 8053832134125319243
     second: Diamond_29
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -113,6 +113,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -144,10 +146,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -828,6 +834,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Diamond_0: 3244622203517571467
+      Diamond_1: 3922489011588170803
+      Diamond_10: -1241150000404854655
+      Diamond_11: 4851713165338844202
+      Diamond_12: -3715455079105827393
+      Diamond_13: -8124254279831718604
+      Diamond_14: 4274920402061865074
+      Diamond_15: 6586713176210915657
+      Diamond_16: 2067628425195827594
+      Diamond_17: -4284566725727535036
+      Diamond_18: -4414133271122878435
+      Diamond_19: 4373951854432365976
+      Diamond_2: 8351116046471538622
+      Diamond_20: -6535362491269770838
+      Diamond_21: 5488938761102453117
+      Diamond_22: 5944812779041062433
+      Diamond_23: -5512954777819666440
+      Diamond_24: -5431056520880862549
+      Diamond_25: -7270290436599291263
+      Diamond_26: -5418468074641209203
+      Diamond_27: -877195131414689884
+      Diamond_28: 2275880702504149464
+      Diamond_29: 8053832134125319243
+      Diamond_3: -4233741276012522752
+      Diamond_4: 8337317655635055903
+      Diamond_5: 3302915123959067063
+      Diamond_6: 6847232173263006836
+      Diamond_7: -1804110550252892320
+      Diamond_8: -3537768094795116466
+      Diamond_9: 898696744676446769
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

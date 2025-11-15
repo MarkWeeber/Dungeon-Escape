@@ -8,6 +8,15 @@ public class UIManager : SingletonBehaviour<UIManager>
     [SerializeField] private Text _diamondsCountText;
     [SerializeField] private TMP_Text _diamondsCountTextHUD;
     [SerializeField] private Image _lifeBarImage;
+    [SerializeField] private Button _showRewardedAdButton;
+
+    private void Start()
+    {
+        if (GoogleAdsManager.Instance != null)
+        {
+            GoogleAdsManager.Instance.AssignButtonToShowRewardedAd(_showRewardedAdButton);
+        }
+    }
 
     public void OpenShopUI()
     {

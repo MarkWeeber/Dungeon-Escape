@@ -69,7 +69,7 @@ TextureImporter:
       213: 4033437065222176047
     second: Warrior_Run_21
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -89,6 +89,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -120,10 +122,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -648,6 +654,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Warrior_Run_0: -432731726981308715
+      Warrior_Run_1: 8551124423323264409
+      Warrior_Run_10: 5471086590305367197
+      Warrior_Run_11: 5209125476909916207
+      Warrior_Run_12: -8815717533442984555
+      Warrior_Run_13: -8968302299855106649
+      Warrior_Run_14: 8847621900663048646
+      Warrior_Run_15: -114792244115296761
+      Warrior_Run_16: 5402781286102983992
+      Warrior_Run_17: 8011178998892510919
+      Warrior_Run_18: -8143717303119721349
+      Warrior_Run_19: -2371571507864105488
+      Warrior_Run_2: -8600065048725663906
+      Warrior_Run_20: -1018422883095592323
+      Warrior_Run_21: 4033437065222176047
+      Warrior_Run_3: 3241423924572654580
+      Warrior_Run_4: -5828329696384875631
+      Warrior_Run_5: 2022560608615539102
+      Warrior_Run_6: 6270924559744724765
+      Warrior_Run_7: 3172669726761555855
+      Warrior_Run_8: 3957893251674622928
+      Warrior_Run_9: 1465887317120085764
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

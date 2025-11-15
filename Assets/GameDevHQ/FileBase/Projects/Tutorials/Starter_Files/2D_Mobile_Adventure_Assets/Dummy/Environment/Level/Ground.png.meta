@@ -150,7 +150,7 @@ TextureImporter:
       213: -5432749014195666866
     second: Ground_48
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -170,6 +170,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -201,10 +203,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1296,6 +1302,56 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Ground_0: 6682738439518977790
+      Ground_1: -562605217060080129
+      Ground_10: 5331757720867617967
+      Ground_11: 5743168839956448968
+      Ground_12: 1940044384358670937
+      Ground_13: 7903714108508714464
+      Ground_14: 3912554482014063563
+      Ground_15: -5970157769536964832
+      Ground_16: 289909530908896649
+      Ground_17: -942494204440328609
+      Ground_18: 1603184614873367213
+      Ground_19: -1986604703071005312
+      Ground_2: -4970410492042351176
+      Ground_20: 2971426260718290345
+      Ground_21: 4556602332822886861
+      Ground_22: -8962348942449561705
+      Ground_23: 6012075677060953230
+      Ground_24: -2801654775933646049
+      Ground_25: -8780798934548743478
+      Ground_26: 955270936876841680
+      Ground_27: -8441922457720628055
+      Ground_28: 4474571884964807243
+      Ground_29: 5357474440129519165
+      Ground_3: -5930158604282628446
+      Ground_30: -5315828571106901945
+      Ground_31: 4322028927912867057
+      Ground_32: 1680713046501002167
+      Ground_33: 5244099617911280066
+      Ground_34: -5274270234370642987
+      Ground_35: 8075736937004810761
+      Ground_36: 2294257664494850697
+      Ground_37: -3896513430485607000
+      Ground_38: -7698955255190142280
+      Ground_39: 1030480857436771457
+      Ground_4: -4233739483619845583
+      Ground_40: 8052831962113911555
+      Ground_41: -7106342086530502622
+      Ground_42: 8618503003260914962
+      Ground_43: 4520358840631008433
+      Ground_44: -8686585952007644489
+      Ground_45: -1067884814678109173
+      Ground_46: -6421702572434001699
+      Ground_47: -7001908263141272159
+      Ground_48: -5432749014195666866
+      Ground_5: -6551456632857933372
+      Ground_6: 4717279005209572468
+      Ground_7: -232304020389510235
+      Ground_8: -2542073858232844238
+      Ground_9: 4362130248060910229
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
