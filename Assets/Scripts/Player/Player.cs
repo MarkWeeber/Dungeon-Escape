@@ -75,6 +75,7 @@ public class Player : SingletonBehaviour<Player>, IDamagable
     private void Update()
     {
         if (!_alive) return;
+        if (Time.timeScale < 0.001f) return;
         ManageSpriteFlipping();
         SetAnimators();
     }
@@ -186,6 +187,7 @@ public class Player : SingletonBehaviour<Player>, IDamagable
             {
                 _alive = false;
                 _animator.SetTrigger("Death");
+                _uIManager.OnPlayerDeath();
             }
         }
     }

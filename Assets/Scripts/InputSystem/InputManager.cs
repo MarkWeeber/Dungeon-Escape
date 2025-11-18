@@ -11,9 +11,8 @@ public class InputManager : MonoBehaviour
         _inputActions.Player.Enable();
     }
 
-    private void Oestroy()
+    private void OnDestroy()
     {
         _inputActions.Player.Disable();
     }
-
 }

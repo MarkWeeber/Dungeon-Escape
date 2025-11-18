@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-
+﻿
 public class GameManager : SingletonBehaviour<GameManager>
 {
     private bool _keyToCastleAquired;

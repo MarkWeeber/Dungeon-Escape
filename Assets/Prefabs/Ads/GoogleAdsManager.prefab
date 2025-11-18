@@ -46,6 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _testingMode: 1
   _adPosition: 1
-  _bannerSizeOption: 4
-  _bannerAdWidth: 320
-  _bannerAdHeight: 50
+  _bannerSizeOption: 2
